@@ -317,7 +317,7 @@ async function getDataCargaPagina(archiveJson=null, url = null, device) {
         // const overallWeb = data.originLoadingExperience.overall_category;
         const loadingExperienceMetrics=data.lighthouseResult.audits;
 
-        return console.log(data);
+        // return console.log(data);
 
         const largestContentFulPaintMs=loadingExperienceMetrics["largest-contentful-paint"];
         const firstInputDelayMs = loadingExperienceMetrics["first-meaningful-paint"];
