@@ -84,7 +84,7 @@
                 <img src="{{ asset('assets/images/texto-logo-extenso.png') }}" class="img-responsive">
               </div>
               <div class="banner-text text-center">
-                <h1 class="white">Tu salud es lo mas importante</h1>
+                <h1 class="white">Tu salud es lo mas importante en tu vida</h1>
                 
                 <a  class="btn btn-appoint" data-toggle="modal" data-target="#exampleModal" > 
                   <h4 class="text-white">Realizar una cita</h4>
