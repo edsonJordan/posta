@@ -100,7 +100,7 @@ Route::group(['middleware'=> 'auth', 'prefix' => 'farmacia'], function () {
     Route::get('factura/{idVenta}', [VentasController::class, 'factura'])->name('factura')->middleware('farmaceutaPermission');
 });
 
-Route::group(['middleware'=> 'auth', 'prefix' => 'pdfs'], function () {
+Route::group([/* 'middleware'=> 'auth', */ 'prefix' => 'pdfs'], function () {
     Route::get('/receta/{cita}', [PDFController::class, 'receta'])->name('pdf.receta');
     Route::get('/receta/download/{cita}', [PDFController::class, 'recetaDownload'])->name('pdf.download.receta');
     Route::get('/diagnostico/{cita}', [PDFController::class, 'diagnostico'])->name('pdf.diagnostico');
