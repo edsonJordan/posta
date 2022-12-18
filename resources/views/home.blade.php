@@ -9,7 +9,7 @@
                 <div class="col-lg-4 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="card-title">Gráfico de registros de citas por MESES</h2>
+                            <h2 class="card-title">Gráfico de registros de citas por MESES mas</h2>
                         </div>
                         <div class="card-body">
                             <canvas id="areaChart" height="250"></canvas>
