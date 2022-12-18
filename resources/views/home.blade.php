@@ -9,7 +9,7 @@
                 <div class="col-lg-4 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="card-title">Gráfico de registros de citas por Meses</h2>
+                            <h2 class="card-title">Gráfico de registros de citas por MESES</h2>
                         </div>
                         <div class="card-body">
                             <canvas id="areaChart" height="250"></canvas>
@@ -18,8 +18,8 @@
                 </div>
                 <div class="col-lg-4 grid-margin stretch-card">
                     <div class="card">
-                        <div class="card-header">   
-                            <h2 class="card-title">Gráfico de conteo de citas por años</h2>                 
+                        <div class="card-header">
+                            <h2 class="card-title">Gráfico de conteo de citas por años</h2>
                         </div>
                         <div class="card-body">
                             <div class="float-chart-container">
@@ -27,11 +27,11 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="col-lg-4 grid-margin stretch-card">
                     <div class="card">
-                        <div class="card-header">   
-                            <h2 class="card-title">Gráfico de citas por estados del mes actual</h2>                 
+                        <div class="card-header">
+                            <h2 class="card-title">Gráfico de citas por estados del mes actual</h2>
                         </div>
                         <div class="card-body">
                             <div class="float-chart-container">
@@ -39,9 +39,9 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
-        </div>  
+        </div>
         <div class="col-md-12 ">
             <div class="row">
                 <div class="col-lg-4 grid-margin stretch-card">
@@ -73,10 +73,10 @@
                             <canvas id="lineChart2" height="250"></canvas>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
-        </div>  
-          
+        </div>
+
         <div class="col-md-12 ">
             <div class="row">
                 <div class="col-lg-6 grid-margin stretch-card">
@@ -101,9 +101,9 @@
                         </div>
                     </div>
                 </div>
-                 
+
             </div>
-        </div>    
+        </div>
 @endsection
 
 @section('scripts')
