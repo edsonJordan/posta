@@ -145,7 +145,7 @@
                 <div class="col-md-4 grid-margin stretch-card" >
                     <div class="card">
                         <div class="card-header">                            
-                            <h2 class="card-title"> Interaction to Next Paint (INP)</h2>
+                            <h2 class="card-title">server response </h2>
                         </div>
                         <div class="card-body" >                                                      
                             <div id="ExperimentalInteractionToNextPaint" class="gauge"></div>
@@ -161,7 +161,7 @@
                 <div class="col-md-4 grid-margin stretch-card" >
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="card-title">Time to First Byte (TTFB)</h2>                            
+                            <h2 class="card-title">Speed Index</h2>                            
                         </div>
                         <div class="card-body" >                                                      
                             <div id="ExperimentalTimeToFirstByte" class="gauge"></div>                            
@@ -306,44 +306,65 @@ async function getDataCargaPagina(archiveJson=null, url = null, device) {
     }
     async function start(data){    
         const idWebAnalizada = data.id;
-        const overallWeb = data.originLoadingExperience.overall_category;
-        const loadingExperienceMetrics=data.originLoadingExperience.metrics;
+        // console.log(data.lighthouseResult);
+        /* if(data.originLoadingExperience === undefined){
+            document.getElementById('countAudit').textContent = Object.keys(data.lighthouseResult.audits).length + " datos"
+            paintAudit("resultsAudit", data.lighthouseResult.audits)            
+            console.log(data.lighthouseResult.audits);
+            return false;
+        } */
+        // return  console.log(data.lighthouseResult);
+        // const overallWeb = data.originLoadingExperience.overall_category;
+        const loadingExperienceMetrics=data.lighthouseResult.audits;
+
+        // return console.log(data);
+
+        const largestContentFulPaintMs=loadingExperienceMetrics["largest-contentful-paint"];
+        const firstInputDelayMs = loadingExperienceMetrics["first-meaningful-paint"];
+        const cumulativeLayoutShiftScore = loadingExperienceMetrics["cumulative-layout-shift"];
+        const firstContentPaint = loadingExperienceMetrics["first-contentful-paint"];
+        const serverResponseTime = loadingExperienceMetrics["server-response-time"];
+        const experimentalTimeToFirstByte=  loadingExperienceMetrics["speed-index"];
+        // return console.log(loadingExperienceMetrics);
+
+        
 
 
-        const largestContentFulPaintMs=loadingExperienceMetrics.LARGEST_CONTENTFUL_PAINT_MS;
-        const firstInputDelayMs = loadingExperienceMetrics.FIRST_INPUT_DELAY_MS;
-        const cumulativeLayoutShiftScore = loadingExperienceMetrics.CUMULATIVE_LAYOUT_SHIFT_SCORE;
-        const firstContentPaint = loadingExperienceMetrics.FIRST_CONTENTFUL_PAINT_MS;
-        const experimentalInteractionToNextPaint = loadingExperienceMetrics.EXPERIMENTAL_INTERACTION_TO_NEXT_PAINT;
-        const experimentalTimeToFirstByte=  loadingExperienceMetrics.EXPERIMENTAL_TIME_TO_FIRST_BYTE;
+        // const largestContentFulPaintMs=loadingExperienceMetrics.LARGEST_CONTENTFUL_PAINT_MS;
+        // const firstInputDelayMs = loadingExperienceMetrics.FIRST_INPUT_DELAY_MS;
+        // const cumulativeLayoutShiftScore = loadingExperienceMetrics.CUMULATIVE_LAYOUT_SHIFT_SCORE;
+        // const firstContentPaint = loadingExperienceMetrics.FIRST_CONTENTFUL_PAINT_MS;
+        // const experimentalInteractionToNextPaint = loadingExperienceMetrics.EXPERIMENTAL_INTERACTION_TO_NEXT_PAINT;
+        // const experimentalTimeToFirstByte=  loadingExperienceMetrics.EXPERIMENTAL_TIME_TO_FIRST_BYTE;
 
-        const dataLargestContentFulPaint = largestContentFulPaintMs.distributions;
+        /* const dataLargestContentFulPaint = largestContentFulPaintMs.distributions;
         const dataFirstInputDelayMs = firstInputDelayMs.distributions;
         const dataCumulativeLayoutShiftScore = cumulativeLayoutShiftScore.distributions;
-        const dataFirstContentPaint = firstContentPaint.distributions;
-        const dataExperimentalInteractionToNextPaint = experimentalInteractionToNextPaint.distributions;
-        const dataExperimentalTimeToFirstByte = experimentalTimeToFirstByte.distributions;
+        const dataFirstContentPaint = firstContentPaint.distributions; */
+        // const dataExperimentalInteractionToNextPaint = experimentalInteractionToNextPaint.distributions;
+        // const dataExperimentalTimeToFirstByte = experimentalTimeToFirstByte.distributions;
 
+        // return console.log(largestContentFulPaintMs);
 
         /* LARGEST_CONTENTFUL_PAINT_MS */
-        const dataGreenLargest = (dataLargestContentFulPaint[0].proportion * 100).toFixed(2);
+        const dataGreenLargest = (largestContentFulPaintMs.score * 100).toFixed(2);
         /* FIRST_INPUT_DELAY_MS */        
-        const dataGreenFirst =  (dataFirstInputDelayMs[0].proportion * 100).toFixed(2);
+        const dataGreenFirst =  (firstInputDelayMs.score * 100).toFixed(2);
         /* CUMULATIVE_LAYOUT_SHIFT_SCORE */
-        const dataGreenCumulativeLayoutShift = (dataCumulativeLayoutShiftScore[0].proportion * 100).toFixed(2);
+        const dataGreenCumulativeLayoutShift = (cumulativeLayoutShiftScore.score * 100).toFixed(2);
         /* FIRST_CONTENTFUL_PAINT_MS */
-        const dataGreenFirstContentPaint = (dataFirstContentPaint[0].proportion * 100).toFixed(2);
+        const dataGreenFirstContentPaint = (firstContentPaint.score * 100).toFixed(2);
         /* EXPERIMENTAL_INTERACTION_TO_NEXT_PAINT */
-        const dataGreenExperimentalInteractionToNextPaint = (dataExperimentalInteractionToNextPaint[0].proportion * 100).toFixed(2);
+        const dataServerResponseTime = (serverResponseTime.score * 100).toFixed(2);
         /* EXPERIMENTAL_TIME_TO_FIRST_BYTE */
-        const dataGreenExperimentalTimeToFirstByte = (dataExperimentalTimeToFirstByte[0].proportion * 100).toFixed(2);
+        const dataGreenExperimentalTimeToFirstByte = (experimentalTimeToFirstByte.score * 100).toFixed(2);
 
         
         LargestContentFulPaint.refresh(dataGreenLargest);
         FirstInputDelayMs.refresh(dataGreenFirst)
         CumulativeLayoutShiftScore.refresh(dataGreenCumulativeLayoutShift)
         FirstContentPaint.refresh(dataGreenFirstContentPaint)
-        ExperimentalInteractionToNextPaint.refresh(dataGreenExperimentalInteractionToNextPaint);
+        ExperimentalInteractionToNextPaint.refresh(dataServerResponseTime)
         ExperimentalTimeToFirstByte.refresh(dataGreenExperimentalTimeToFirstByte);
         // console.log(largestContentFulPaintMs);
 
@@ -351,7 +372,7 @@ async function getDataCargaPagina(archiveJson=null, url = null, device) {
         
         const nodeOverallWerb = document.getElementById('overallWeb');
         // document.getElementById("myH2").style.color = "#ff0000";
-        if(overallWeb === 'SLOW'){
+        /* if(overallWeb === 'SLOW'){
             nodeOverallWerb.style.color = "#FF4E43";   
             nodeOverallWerb.textContent="Lento";         
         }   
@@ -362,22 +383,23 @@ async function getDataCargaPagina(archiveJson=null, url = null, device) {
         if(overallWeb === 'FAST'){
             nodeOverallWerb.style.color = "#0CCE6A";      
             nodeOverallWerb.textContent="Rapido";        
-        }  
+        }   */
         
         /* InnertHTML IN FOOTERS */
         document.getElementById('FooterLargestContentFulPaint').textContent = largestContentFulPaintMs.category;
         document.getElementById('FooterFirstInputDelayMs').textContent = firstInputDelayMs.category;
         document.getElementById('FooterCumulativeLayoutShiftScore').textContent = cumulativeLayoutShiftScore.category;
         document.getElementById('FooterFirstContentPaint').textContent = firstContentPaint.category;
-        document.getElementById('FooterExperimentalInteractionToNextPaint').textContent = experimentalInteractionToNextPaint.category;
+        // document.getElementById('FooterExperimentalInteractionToNextPaint').textContent = experimentalInteractionToNextPaint.category;
         document.getElementById('FooterExperimentalTimeToFirstByte').textContent = experimentalTimeToFirstByte.category;
 
-        addTextPercentil(FooterSecondsLargestContentFulPaint, largestContentFulPaintMs.percentile)
-        addTextPercentil(FooterSecondsFirstInputDelayMs, firstInputDelayMs.percentile)
-        addTextPercentil(FooterSecondsCumulativeLayoutShiftScore, cumulativeLayoutShiftScore.percentile)
-        addTextPercentil(FooterSecondsFirstContentPaint, firstContentPaint.percentile)
-        addTextPercentil(FooterSecondsExperimentalInteractionToNextPaint, experimentalInteractionToNextPaint.percentile)
-        addTextPercentil(FooterSecondsExperimentalTimeToFirstByte, experimentalTimeToFirstByte.percentile)
+        // console.log(largestContentFulPaintMs);
+        addTextPercentil(FooterSecondsLargestContentFulPaint, largestContentFulPaintMs.displayValue)
+        addTextPercentil(FooterSecondsFirstInputDelayMs, firstInputDelayMs.displayValue)
+        addTextPercentil(FooterSecondsCumulativeLayoutShiftScore, cumulativeLayoutShiftScore.displayValue)
+        addTextPercentil(FooterSecondsFirstContentPaint, firstContentPaint.displayValue)
+        // addTextPercentil(FooterSecondsExperimentalInteractionToNextPaint, experimentalInteractionToNextPaint.displayValue)
+        addTextPercentil(FooterSecondsExperimentalTimeToFirstByte, experimentalTimeToFirstByte.displayValue)
 
         document.getElementById('countAudit').textContent = Object.keys(data.lighthouseResult.audits).length + " datos"
         paintAudit("resultsAudit", data.lighthouseResult.audits)

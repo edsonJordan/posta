@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Centro de salud Collique Ill Zona</title>
+  <title>Centro de salud Lima metropolitana</title>
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
   <link href="{{ asset('assets/icons/font-awesome-old/css/font-awesome.min.css') }}" rel="stylesheet">
@@ -41,11 +41,11 @@
               </div>
               <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#banner">Home</a></li>
-                  <li class=""><a href="#service">Services</a></li>
-                  <li class=""><a href="#about">About</a></li>
-                  <li class=""><a href="#testimonial">Testimonial</a></li>
-                  <li class=""><a href="#contact">Contact</a></li>
+                  <li class="active"><a href="#banner">Inicio</a></li>
+                  <li class=""><a href="#service">Servicios</a></li>
+                  <li class=""><a href="#about">Nosotros</a></li>
+                  <li class=""><a href="#testimonial">Testimonios</a></li>
+                  <li class=""><a href="#contact">Contactanos</a></li>
                   @if (Auth::check())
                       <?php 
                       $rolUser=  Auth::user()->rol_id;
@@ -84,8 +84,7 @@
                 <img src="{{ asset('assets/images/texto-logo-extenso.png') }}" class="img-responsive">
               </div>
               <div class="banner-text text-center">
-                <h1 class="white">Healthcare at your desk!!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h1 class="white">Tu salud es lo mas importante en tu vida</h1>
                 
                 <a  class="btn btn-appoint" data-toggle="modal" data-target="#exampleModal" > 
                   <h4 class="text-white">Realizar una cita</h4>
@@ -111,9 +110,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-sm-4">
-          <h2 class="ser-title">Our Service</h2>
+          <h2 class="ser-title">Nuesto servicios</h2>
           <hr class="botm-line">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris cillum.</p>
+          <p>Brindamos los servicios de Examen Médicos para Brevete (Auto, Moto) , aplicación de Vitamina C, Pruebas de descarte COVID19, Análisis Clínicos.</p>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="service-info">
@@ -121,8 +120,9 @@
               <i class="fa fa-stethoscope"></i>
             </div>
             <div class="icon-info">
-              <h4>24 Hour Support</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>24 Horas de atención</h4>
+              <p>Atendemos emergencias médicas y accidentales las 24 horas y 365 días del año, a través de ambulancias equipadas, así como servicios de traslado asistido y programado en Lima y provincias.
+              </p>
             </div>
           </div>
           <div class="service-info">
@@ -130,8 +130,9 @@
               <i class="fa fa-ambulance"></i>
             </div>
             <div class="icon-info">
-              <h4>Emergency Services</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>Atención de emergencias</h4>
+              <p>Atendemos emergencias médicas y accidentales las 24 horas y 365 días del año, a través de ambulancias equipadas, así como servicios de traslado asistido y programado en Lima y provincias.
+              </p>
             </div>
           </div>
         </div>
@@ -141,8 +142,10 @@
               <i class="fa fa-user-md"></i>
             </div>
             <div class="icon-info">
-              <h4>Medical Counseling</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>Consultas Médicas</h4>
+              <p>El Programa médico familiar cobertura las emergencias médicas prioridad 1, con atención en el lugar donde estas se produzcan (Dentro de nuestra zona de cobertura , las 24 horas del día)
+
+              </p>
             </div>
           </div>
           <div class="service-info">
@@ -150,8 +153,9 @@
               <i class="fa fa-medkit"></i>
             </div>
             <div class="icon-info">
-              <h4>Premium Healthcare</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>Salud de primera calidad</h4>
+              <p>Atención médica de primera calidad. Brinda atención médica integral para adultos y adolescentes. Sirve como un centro de atención primaria para enfermedades.
+              </p>
             </div>
           </div>
         </div>
@@ -167,34 +171,34 @@
           <div class="col-md-4 col-sm-4 bor-left">
             <div class="mt-boxy-color"></div>
             <div class="medi-info">
-              <h3>Emergency Case</h3>
-              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <a href="#" class="medi-info-btn">READ MORE</a>
+              <h3>Caso de emergencia</h3>
+              <p>Dolor repentino y severo en cualquier parte del cuerpo. Mareo, debilidad o cambio súbito en la visión. </p>
+              <a href="#" class="medi-info-btn">Leer más</a>
             </div>
           </div>
           <div class="col-md-4 col-sm-4">
             <div class="medi-info">
-              <h3>Emergency Case</h3>
-              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <a href="#" class="medi-info-btn">READ MORE</a>
+              <h3>Caso de emergencia</h3>
+              <p>Vómitos severos y persistentes. Lesión súbita debito a un accidente automovilístico, quemaduras o inhalación de humo, ahogamiento inminente, herida profunda o grande, otras lesiones</p>
+              <a href="#" class="medi-info-btn">Leer más</a>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 mt-boxy-3">
             <div class="mt-boxy-color"></div>
             <div class="time-info">
-              <h3>Opening Hours</h3>
+              <h3>Horarios de ateción</h3>
               <table style="margin: 8px 0px 0px;" border="1">
                 <tbody>
                   <tr>
-                    <td>Monday - Friday</td>
+                    <td>Lunes - Viernes</td>
                     <td>8.00 - 17.00</td>
                   </tr>
                   <tr>
-                    <td>Saturday</td>
+                    <td>Sábado</td>
                     <td>9.30 - 17.30</td>
                   </tr>
                   <tr>
-                    <td>Sunday</td>
+                    <td>Domingo</td>
                     <td>9.30 - 15.00</td>
                   </tr>
                 </tbody>
@@ -212,10 +216,10 @@
       <div class="row">
         <div class="col-md-3 col-sm-4 col-xs-12">
           <div class="section-title">
-            <h2 class="head-title lg-line">The Medilap <br>Ultimate Dream</h2>
+            <h2 class="head-title lg-line">Centro de salud<br>  tu mejor opción </h2>
             <hr class="botm-line">
-            <p class="sec-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
-            <a href="" style="color: #0cb8b6; padding-top:10px;">Know more..</a>
+            <p class="sec-para">Infórmese sobre los centros de atención telefónica y otra tecnología y terminología de VoIP. GoTo proporciona soluciones para mejorar el trabajo remoto.  </p>
+            <a href="" style="color: #0cb8b6; padding-top:10px;">Leer más..</a>
           </div>
         </div>
         <div class="col-md-9 col-sm-8 col-xs-12">
@@ -223,15 +227,15 @@
             <div class="more-features-box-text">
               <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
               <div class="more-features-box-text-description">
-                <h3>It's something important you want to know.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.</p>
+                <h3>Es algo importante que quieres saber.                </h3>
+                <p>Una administración eficiente de las acciones en las instituciones de salud es ideal para una distribución equitativa de las actividades entre el personal, dando la oportunidad de una mejor calidad de vida y mejores ambientes laborales.</p>
               </div>
             </div>
             <div class="more-features-box-text">
               <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
               <div class="more-features-box-text-description">
-                <h3>It's something important you want to know.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.</p>
+                <h3>Es algo importante que quieres saber.</h3>
+                <p> Existen varios beneficios de tener una vida saludable, pero el principal de ellos que podríamos nombrar es que nuestro cuerpo se libera de las diversas formas de trastornos y complicaciones y, por tanto, se obtiene una vida más larga, sin sufrir ningún tipo de dolores o malestares.</p>
               </div>
             </div>
           </div>
@@ -245,7 +249,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="ser-title">Meet Our Doctors!</h2>
+          <h2 class="ser-title">Conversa con nuestros doctores  !</h2>
           <hr class="botm-line">
         </div>
         <div class="col-md-3 col-sm-3 col-xs-6">
@@ -313,13 +317,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="ser-title">see what patients are saying?</h2>
+          <h2 class="ser-title">que dicen nuestros pacientes?</h2>
           <hr class="botm-line">
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="testi-details">
             <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Excelente comenzando atención desde el joven que está en la entrada asta el doctor las enfermemera, todos son un amor.
+
+            </p>
           </div>
           <div class="testi-info">
             <!-- User Image -->
@@ -331,7 +337,9 @@
         <div class="col-md-4 col-sm-4">
           <div class="testi-details">
             <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Excelente atención desde el joven en la entrada al médico y las enfermeras, todos son un amor.
+
+              .</p>
           </div>
           <div class="testi-info">
             <!-- User Image -->
@@ -343,7 +351,8 @@
         <div class="col-md-4 col-sm-4">
           <div class="testi-details">
             <!-- Paragraph -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>¡Me encantó la oficina! El personal fue muy atento y dulce.
+            </p>
           </div>
           <div class="testi-info">
             <!-- User Image -->
@@ -362,11 +371,12 @@
       <div class=" row">
         <div class="col-md-2"></div>
         <div class="text-right-md col-md-4 col-sm-4">
-          <h2 class="section-title white lg-line">« A few words<br> about us »</h2>
+          <h2 class="section-title white lg-line">« UNAS POCAS PALABRAS
+           <br>  SOBRE NOSOTROS »</h2>
         </div>
         <div class="col-md-4 col-sm-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typek
-          <p class="text-right text-primary"><i>— Medilap Healthcare</i></p>
+          La calidad es importante. Algunos centros trabajan mejor que otros. Una forma de saber acerca de la calidad de un centro es revisar los informes realizados por el gobierno nacional, estatal y grupos de consumidores.
+          <p class="text-right text-primary"><i>—Lima metropolitana</i></p>
         </div>
         <div class="col-md-2"></div>
       </div>
@@ -378,44 +388,44 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="ser-title">Contact us</h2>
+          <h2 class="ser-title">Contáctanos</h2>
           <hr class="botm-line">
         </div>
         <div class="col-md-4 col-sm-4">
-          <h3>Contact Info</h3>
+          <h3>Información de contacto</h3>
           <div class="space"></div>
-          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>321 Awesome Street<br> New York, NY 17022</p>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Lima<br> Metropolitana</p>
           <div class="space"></div>
           <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@companyname.com</p>
           <div class="space"></div>
-          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+1 800 123 1234</p>
+          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+01 823 1234</p>
         </div>
         <div class="col-md-8 col-sm-8 marb20">
           <div class="contact-info">
-            <h3 class="cnt-ttl">Having Any Query! Or Book an appointment</h3>
+            <h3 class="cnt-ttl">¡Consiga alguna consulta! O Reserve una cita</h3>
             <div class="space"></div>
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
             <form action="" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Tu nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Tu correo" data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
                 <div class="validation"></div>
               </div>
 
               <div class="form-action">
-                <button type="submit" class="btn btn-form">Send Message</button>
+                <button type="submit" class="btn btn-form">Enviar mensaje</button>
               </div>
             </form>
           </div>
@@ -431,27 +441,28 @@
         <div class="row">
           <div class="col-md-4 col-sm-4 marb20">
             <div class="ftr-tle">
-              <h4 class="white no-padding">About Us</h4>
+              <h4 class="white no-padding">Acerca de nosotros</h4>
             </div>
             <div class="info-sec">
-              <p>Praesent convallis tortor et enim laoreet, vel consectetur purus latoque penatibus et dis parturient.</p>
+              <p>Infórmese sobre los centros de atención telefónica y otra tecnología y terminología de VoIP. GoTo proporciona soluciones para mejorar el trabajo remoto.                .</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 marb20">
             <div class="ftr-tle">
-              <h4 class="white no-padding">Quick Links</h4>
+              <h4 class="white no-padding">Enlaces rápidos
+              </h4>
             </div>
             <div class="info-sec">
               <ul class="quick-info">
-                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
-                <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
-                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+                <li><a href="index.html"><i class="fa fa-circle"></i>Inicio</a></li>
+                <li><a href="#service"><i class="fa fa-circle"></i>Servicios</a></li>
+                <li><a href="#contact"><i class="fa fa-circle"></i>Citas</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 marb20">
             <div class="ftr-tle">
-              <h4 class="white no-padding">Follow us</h4>
+              <h4 class="white no-padding">Siguenos</h4>
             </div>
             <div class="info-sec">
               <ul class="social-icon">

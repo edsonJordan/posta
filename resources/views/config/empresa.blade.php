@@ -4,7 +4,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Informacion de la Clinica</h4>
+                <h4 class="card-title">Informacion del Centro de salud</h4>
 
             </div>
             <form action="{{ route('empresa.store') }}" method="post" autocomplete="off" accept-charset="UTF-8"
